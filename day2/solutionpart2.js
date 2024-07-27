@@ -1,6 +1,5 @@
 const fs = require("fs");
 
-// Read and parse the data
 const data = fs.readFileSync("input.txt", "utf8");
 const lines = data.trim().split("\n");
 
@@ -34,7 +33,6 @@ const getMinimumCubes = (sets) => {
       if (colour === "blue") blueCount += num;
     }
 
-    // Update the minimum required cubes
     if (redCount > minRed) minRed = redCount;
     if (greenCount > minGreen) minGreen = greenCount;
     if (blueCount > minBlue) minBlue = blueCount;
